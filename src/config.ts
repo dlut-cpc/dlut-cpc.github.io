@@ -70,9 +70,9 @@ export const profileConfig: ProfileConfig = {
 			url: "https://space.bilibili.com/681235442",
 		},
 		{
-			name: "Zhihu",
-			icon: "fa6-brands:zhihu",
-			url: "https://www.zhihu.com/people/Farewe1ll",
+			name: "Telegram",
+			icon: "fa6-brands:telegram",
+			url: "https://t.me/Farewe1ll",
 		},
 		{
 			name: "GitHub",
