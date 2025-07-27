@@ -126,8 +126,9 @@
     }
 
     a img {
-        @apply no-underline decoration-none !important; /* 移除下划线和装饰 */
+        /* @apply no-underline !important; 移除下划线和装饰 */
         display: inline-block; /* 确保图片正常显示 */
         vertical-align: middle; /* 调整图片的垂直对齐 */
+        text-decoration: none;
     }
 }
