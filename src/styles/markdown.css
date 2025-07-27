@@ -1,0 +1,133 @@
+.custom-md {
+    h1 {
+        @apply text-4xl; /* 增大标题1的字体并增加行间距 */
+    }
+
+    h2 {
+        @apply text-3xl; /* 增大标题2的字体并增加行间距 */
+    }
+
+    h3 {
+        @apply text-2xl; /* 增大标题3的字体并增加行间距 */
+    }
+
+    h4, h5, h6 {
+        @apply text-xl; /* 增大标题4-6的字体并增加行间距 */
+    }
+
+    p {
+        @apply text-lg leading-loose; /* 增大正文的字体并增加行间距 */
+    }
+    strong, b {
+        @apply font-bold text-lg leading-loose; /* 增大加粗字体并增加行间距 */
+    }
+    em, i {
+        @apply italic text-lg leading-loose; /* 增大斜体字体并增加行间距 */
+    }
+
+
+    h1, h2, h3, h4, h5, h6 {
+        .anchor {
+            @apply transition -m-0.5 ml-[0.2ch] p-0.5 select-none opacity-0 no-underline !important;
+
+            .anchor-icon {
+                @apply mx-[0.45ch] !important;
+            }
+        }
+
+        &:hover {
+            .anchor {
+                @apply opacity-100 !important;
+            }
+        }
+    }
+
+    a:not(.no-styling) {
+        @apply relative bg-none link font-medium text-[var(--primary)]
+        underline decoration-[var(--link-underline)] decoration-1 decoration-dashed underline-offset-4;
+        box-decoration-break: clone;
+        -webkit-box-decoration-break: clone;
+
+        &:hover, &:active {
+            @apply decoration-transparent;
+            background: var(--btn-plain-bg-hover);
+            border-bottom: 1px dashed var(--link-hover);
+            text-decoration: none;
+        }
+    }
+
+    code {
+        @apply bg-[var(--inline-code-bg)] text-[var(--inline-code-color)] px-1 py-0.5 rounded-md overflow-hidden;
+
+        font-family: 'Fira Code', 'JetBrains Mono Variable', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+        /* tab-size: 4 !important; */
+        &:before {
+            content:none;
+        }
+        &:after {
+            content:none;
+        }
+
+        counter-reset: line;
+        span.line {
+            &:before {
+                @apply text-white/25 mr-4 w-4 inline-block;
+                content: counter(line);
+                counter-increment: line;
+                direction: rtl;
+            }
+            &:last-child:empty, &:last-child:has(> span:empty:only-child) {
+                display: none;
+            }
+        }
+    }
+
+    .copy-btn {
+        all: initial;
+        @apply btn-regular-dark opacity-0 shadow-lg shadow-black/50 absolute active:scale-90 h-8 w-8 top-3 right-3 text-sm rounded-lg transition-all ease-in-out z-20 cursor-pointer;
+    }
+    .frame:hover .copy-btn {
+        opacity: 1;
+    }
+
+    .copy-btn-icon {
+        @apply absolute top-1/2 left-1/2 transition -translate-x-1/2 -translate-y-1/2 w-4 h-4 fill-white pointer-events-none;
+    }
+    .copy-btn .copy-icon {
+        @apply opacity-100 fill-white dark:fill-white/75;
+    }
+    .copy-btn.success .copy-icon {
+        @apply opacity-0 fill-[var(--deep-text)]
+    }
+    .copy-btn .success-icon {
+        @apply opacity-0 fill-white;
+    }
+    .copy-btn.success .success-icon {
+        @apply opacity-100
+    }
+
+    .expressive-code {
+        @apply my-4;
+        /* tab-size: 4 !important; */
+        ::selection {
+            @apply bg-[var(--codeblock-selection)];
+        }
+    }
+
+
+    ul, ol {
+        li {
+            @apply leading-loose; /* 增加列表项的行间距 */
+        }
+    }
+
+    blockquote {
+        @apply leading-loose; /* 增加引用的行间距 */
+    }
+
+    a img {
+        @apply no-underline decoration-none !important; /* 移除下划线和装饰 */
+        display: inline-block; /* 确保图片正常显示 */
+        vertical-align: middle; /* 调整图片的垂直对齐 */
+    }
+}

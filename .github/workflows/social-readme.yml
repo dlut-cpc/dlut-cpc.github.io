@@ -1,0 +1,20 @@
+name: Social Readme
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  update-social:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: zylele/social-readme@master
+        with:
+          blog_rss_link: https://farewe1ll.github.io/rss.xml
+          # douban_name: your douban username
+          gh_token: ${{ secrets.UPD_TO_PROFILE }}
+          # repository: <username/reponame> #可选，默认将会自动使用执行workflow的存储库

@@ -1,0 +1,74 @@
+---
+import { UNCATEGORIZED } from "../../constants/constants";
+import I18nKey from "../../i18n/i18nKey";
+import { i18n } from "../../i18n/translation";
+import { getSortedPosts } from "../../utils/content-utils";
+import { getPostUrlBySlug } from "../../utils/url-utils";
+import WidgetLayout from "./WidgetLayout.astro";
+
+const COLLAPSED_HEIGHT = "7.5rem";
+
+interface Props {
+	class?: string;
+	style?: string;
+}
+const className = Astro.props.class;
+const style = Astro.props.style;
+
+// 获取所有文章并按系列分组
+const posts = await getSortedPosts();
+const seriesMap = new Map<string, typeof posts>();
+
+posts.forEach((post) => {
+	const seriesName = post.data.series;
+	if (seriesName && seriesName !== UNCATEGORIZED) {
+		if (!seriesMap.has(seriesName)) {
+			seriesMap.set(seriesName, []);
+		}
+		seriesMap.get(seriesName)?.push(post);
+	}
+});
+
+// 将系列按文章数量排序
+const seriesArray = Array.from(seriesMap.entries()).sort(
+	(a, b) => b[1].length - a[1].length,
+);
+
+const isCollapsed = seriesArray.length >= 4;
+---
+{seriesArray.length > 0 && (
+<WidgetLayout name={i18n(I18nKey.series)} id="all-series" isCollapsed={isCollapsed} collapsedHeight={COLLAPSED_HEIGHT} class={className} style={style}>
+    <div class="flex flex-col gap-1">
+        {seriesArray.map(([seriesName, seriesPosts]) => (
+            <a href={getPostUrlBySlug(seriesPosts[seriesPosts.length - 1].slug)}
+                aria-label={seriesName}
+                class="group btn-plain h-10 w-full rounded-lg hover:text-[initial]"
+            >
+                <!-- dot and line -->
+                <div class="w-[15%] md:w-[10%] relative dash-line h-full flex items-center">
+                    <div class="transition-all mx-auto w-1 h-1 rounded group-hover:h-5
+                    bg-[oklch(0.5_0.05_var(--hue))] group-hover:bg-[var(--primary)]
+                    outline outline-4 z-50
+                    outline-[var(--card-bg)]
+                    group-hover:outline-[var(--btn-plain-bg-hover)]
+                    group-active:outline-[var(--btn-plain-bg-active)]
+                    "
+                    ></div>
+                </div>
+                <!-- series info -->
+                <div class="w-[85%] text-left
+                    group-hover:translate-x-1 transition-all group-hover:text-[var(--primary)]
+                    text-75 pr-15 flex flex-col"
+                >
+                    <div class="font-bold whitespace-nowrap overflow-ellipsis overflow-hidden" title={seriesName}>
+                        {seriesName}
+                    </div>
+                    <div class="text-xs text-50">
+                        {seriesPosts.length} 篇文章
+                    </div>
+                </div>
+            </a>
+        ))}
+    </div>
+</WidgetLayout>
+)}
