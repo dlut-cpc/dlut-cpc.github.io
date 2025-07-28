@@ -47,6 +47,11 @@ export const navBarConfig: NavBarConfig = {
 		LinkPreset.About,
 		LinkPreset.Friends,
 		{
+			name: "Gravatar",
+			url: "https://cn.gravatar.com/mortallyfuturistic36ba6ede92",
+			external: true,
+		},
+		{
 			name: "开往",
 			url: "https://www.travellings.cn/go.html",
 			external: true,
