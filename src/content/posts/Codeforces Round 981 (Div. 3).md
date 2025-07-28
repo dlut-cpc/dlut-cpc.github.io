@@ -3,7 +3,7 @@ title: "Codeforces Round 981 (Div. 3)"
 published: 2024-10-25 #创建时间
 updated: 2024-10-26 #更新时间
 tags: [Codeforces, Div. 3, cpp]
-description: "2025 SSDUT 科技文化节程序设计竞赛 G 题解"
+description: "Codeforces Round 981 (Div. 3) 解题报告"
 image: ''
 category: '算法'
 draft: false # 是否为草稿
