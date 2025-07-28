@@ -79,14 +79,24 @@ FOR (i, 0, n) {
 }
 stk.clear();
 ROF (i, n, 0) {
-	while (!stk.empty() && a[stk.back()] <= a[i]) stk.pop_back();
-	if (!stk.empty()) rm[i] = stk.back();
+	while (!stk.empty() && a[stk.back()] <= a[i]) {
+		stk.pop_back();
+	}
+	if (!stk.empty()) {
+		rm[i] = stk.back();
+	}
 	stk.push_back(i);
 }
 FOR (i, 0, n) {
-	if (lm[i] != n && rm[i] != n) dst[i] = a[lm[i]] > a[rm[i]] ? lm[i] : rm[i];
-	if (lm[i] == n && rm[i] != n) dst[i] = rm[i];
-	if (lm[i] != n && rm[i] == n) dst[i] = lm[i];
+	if (lm[i] != n && rm[i] != n) {
+		dst[i] = a[lm[i]] > a[rm[i]] ? lm[i] : rm[i];
+	}
+	if (lm[i] == n && rm[i] != n) {
+		dst[i] = rm[i];
+	}
+	if (lm[i] != n && rm[i] == n) {
+		dst[i] = lm[i];
+	}
 }
 ```
 

@@ -60,7 +60,6 @@
         @apply bg-[var(--inline-code-bg)] text-[var(--inline-code-color)] px-1 py-0.5 rounded-md overflow-hidden;
 
         font-family: 'Fira Code', 'JetBrains Mono Variable', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
-        /* tab-size: 4 !important; */
         &:before {
             content:none;
         }
@@ -108,7 +107,6 @@
 
     .expressive-code {
         @apply my-4;
-        /* tab-size: 4 !important; */
         ::selection {
             @apply bg-[var(--codeblock-selection)];
         }

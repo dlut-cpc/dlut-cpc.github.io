@@ -78,7 +78,6 @@ export default defineConfig({
 				codeFontSize: "1.0rem",
 				codeFontFamily: "'Fira Code', 'JetBrains Mono Variable', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace",
 				codeLineHeight: "1.5rem",
-				// codeTabWidth: 4,
 				frames: {
 					editorBackground: "var(--codeblock-bg)",
 					terminalBackground: "var(--codeblock-bg)",
@@ -95,15 +94,11 @@ export default defineConfig({
 					insHue: 180,
 					markHue: 250
 				}
-				// customCSS: `
-				// 	code {
-				// 		tab-size: 4; /* 设置 Tab 的宽度为 4 个字符 */
-				// 	}
-				// `,
 			},
+			tabWidth: 4,
 			frames: {
 				showCopyToClipboardButton: true,
-			}
+			},
 		}),
 		svelte(),
 		sitemap(),
