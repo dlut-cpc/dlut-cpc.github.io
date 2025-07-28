@@ -125,10 +125,10 @@
         @apply leading-loose; /* 增加引用的行间距 */
     }
 
-    a img {
+    /* a img {
         /* @apply no-underline !important; 移除下划线和装饰 */
-        display: inline-block; /* 确保图片正常显示 */
-        vertical-align: middle; /* 调整图片的垂直对齐 */
-        text-decoration: none;
-    }
+        /* display: inline-block; 确保图片正常显示 */
+        /* vertical-align: middle; 调整图片的垂直对齐 */
+        /* text-decoration: none; */
+    /* } */
 }
