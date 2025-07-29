@@ -46,6 +46,13 @@ export default defineConfig({
 			updateHead: true,
 			updateBodyClass: false,
 			globalInstance: true,
+			// Firefox compatibility improvements
+			animationSelector: '[class*="transition-swup-"]',
+			linkSelector: 'a[href]:not([target="_blank"]):not([href^="mailto:"]):not([href^="tel:"]):not([data-no-swup])',
+			requestHeaders: {
+				'X-Requested-With': 'swup',
+				'Accept': 'text/html, application/xhtml+xml'
+			},
 		}),
 		icon({
 			include: {
