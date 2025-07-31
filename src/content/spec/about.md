@@ -1,6 +1,6 @@
 # About
 
-前 OIer，现役不知名 ACMer，②江莉XCPC民间算法交流枢纽群 & 大兔子竞赛资讯交流群 ~~暴政~~管理。
+SE 本科在读，前 OIer，现役不知名 ACMer，②江莉XCPC民间算法交流枢纽群 & 大兔子竞赛资讯交流群 ~~暴政~~管理。
 
 ![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=Farewe1ll&show_icons=true&theme=tokyonight&hide=contribs,prs&layout=compact)
 
