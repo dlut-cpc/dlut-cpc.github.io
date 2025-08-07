@@ -9,6 +9,7 @@ category: '算法'
 draft: false # 是否为草稿
 series: "Atcoder"
 ---
+
 # [AtCoder Beginner Contest 380](https://atcoder.jp/contests/abc380) (Virtual Participation)
 
 烂完了，读假又什么都不会呜呜呜。

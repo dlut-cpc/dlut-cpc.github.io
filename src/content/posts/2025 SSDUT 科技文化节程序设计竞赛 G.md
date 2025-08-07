@@ -9,6 +9,7 @@ category: '算法'
 draft: false # 是否为草稿
 series: "SSDUT"
 ---
+
 # [2025 SSDUT 科技文化节程序设计竞赛 G](https://hydro.ac/d/ssdut/p/O1043) 题解
 
 本文提供一种*单调栈 + 笛卡尔树*解法。
