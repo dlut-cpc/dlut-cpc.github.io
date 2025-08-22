@@ -8,16 +8,16 @@ import type {
 import { LinkPreset } from "./types/config";
 
 export const siteConfig: SiteConfig = {
-	title: "Farewe1ll's Blog",
-	subtitle: "拨雪寻春，烧灯续昼。",
+	title: "SSDUT-ACM",
+	subtitle: "xxx",
 	lang: "zh_CN", // 'en', 'zh_CN', 'zh_TW', 'ja', 'ko', 'es', 'th', 'vi'
 	themeColor: {
 		hue: 190, // Default hue for the theme color, from 0 to 360. e.g. red: 0, teal: 200, cyan: 250, pink: 345
 		fixed: false, // Hide the theme color picker for visitors
 	},
 	banner: {
-		enable: true,
-		src: "assets/images/banner.png", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
+		enable: false,
+		src: "assets/images/avatar.png", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
 		position: "center", // Equivalent to object-position, only supports 'top', 'center', 'bottom'. 'center' by default
 		credit: {
 			enable: false, // Display the credit text of the banner image
@@ -45,49 +45,28 @@ export const navBarConfig: NavBarConfig = {
 		LinkPreset.Series,
 		LinkPreset.Archive,
 		LinkPreset.About,
-		LinkPreset.Friends,
-		{
-			name: "Gravatar",
-			url: "https://cn.gravatar.com/mortallyfuturistic36ba6ede92",
-			external: true,
-		},
-		{
-			name: "开往",
-			url: "https://www.travellings.cn/go.html",
-			external: true,
-		},
 	],
 };
 
 export const profileConfig: ProfileConfig = {
 	avatar: "assets/images/avatar.png", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
-	name: "Farewe1ll_山竹",
-	bio: "拨雪寻春，烧灯续昼。",
+	name: "SSDUT-ACM",
+	bio: "xxx",
 	links: [
-		{
-			name: "QQ",
-			icon: "fa6-brands:qq",
-			url: "mqq://im/chat?chat_type=wpa&uin=2756681306&version=1&src_type=web",
-		},
 		{
 			name: "bilibili",
 			icon: "fa6-brands:bilibili",
-			url: "https://space.bilibili.com/681235442",
-		},
-		{
-			name: "Telegram",
-			icon: "fa6-brands:telegram",
-			url: "https://t.me/Farewe1ll",
+			url: "https://space.bilibili.com/396380763",
 		},
 		{
 			name: "GitHub",
 			icon: "fa6-brands:github",
-			url: "https://github.com/Farewe1ll",
+			url: "https://github.com/dlut-cpc",
 		},
 		{
 			name: "Email",
 			icon: "material-symbols:mail",
-			url: "mailto:Farewe1ll_youngjh@foxmail.com",
+			url: "mailto:ssdut_acm@126.com",
 		},
 	],
 };
