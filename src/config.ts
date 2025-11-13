@@ -8,8 +8,8 @@ import type {
 import { LinkPreset } from "./types/config";
 
 export const siteConfig: SiteConfig = {
-	title: "SSDUT-ACM",
-	subtitle: "xxx",
+	title: "DLUT-CPC",
+	subtitle: "主页",
 	lang: "zh_CN", // 'en', 'zh_CN', 'zh_TW', 'ja', 'ko', 'es', 'th', 'vi'
 	themeColor: {
 		hue: 190, // Default hue for the theme color, from 0 to 360. e.g. red: 0, teal: 200, cyan: 250, pink: 345
@@ -51,8 +51,8 @@ export const navBarConfig: NavBarConfig = {
 
 export const profileConfig: ProfileConfig = {
 	avatar: "assets/images/avatar.png", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
-	name: "SSDUT-ACM",
-	bio: "xxx",
+	name: "DLUT-CPC",
+	bio: "大连理工大学创中 CPC 组",
 	links: [
 		{
 			name: "bilibili",
